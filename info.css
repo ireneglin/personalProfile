@@ -1,0 +1,193 @@
+/*css for nav menu*/
+
+header span.img {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3F324D;
+    opacity: 0.9;
+}
+
+ul.menu li {
+    float: left;
+}
+
+ul.menu li a {
+    padding: 16px;
+}
+
+ul.menu li a:hover {
+    background-color: #300030;
+}
+
+ul.menu li.icon {
+    display: none;
+}
+/*----------------------------------------------------------*/
+/*css relevant to profile content section info.html
+Background image source: http://gallery.wacom.com/gallery/16183123/Game-Background
+Profile picture image source: */
+
+/*background*/
+body {
+    background: url("bkgrd23.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/*banner*/
+img.banner {
+    display: block;
+    margin: auto;
+    width: 100%;
+    margin-top: 30px;
+    border: 10px solid #3F324D;
+    opacity: 0.9;
+}
+
+/*profile picture css*/
+img.propho {
+    border-radius: 200px;
+    display: block;
+}
+
+/*purple box to contain all text and profile picture*/
+.row {
+    background-color: #3F324D;
+    opacity: 0.9;
+    color: white;
+    font-size: 18px;
+    line-height: 180%;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+/*turn a link into buttons for contact master section*/
+ul.contact{
+    list-style-type: none;
+}
+
+a.contactLinks {
+    line-height: 5px;
+}
+
+a.contactLinks:link, a.contactLinks:visited {
+    background-color: #FF995E;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+a.contactLinks:hover, a.contactLinks:active {
+    background-color: #604848;
+}
+
+/*----------------------------------------------------------*/
+/*css for responsive design*/
+
+@media screen and (min-width: 680px) {
+    img.banner {
+        display: block;
+        margin: auto;
+        margin-top: 30px;
+        height: 30%;
+        border: 15px solid #3F324D;
+        opacity: 0.9;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    [class*="col-"] {
+        float: left;
+        padding: 25px;
+    }
+
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+}
+
+@media screen and (max-width: 680px) {
+
+    ul.menu li:not(:last-child){
+        display: none;
+    }
+    ul.menu li.icon {
+        float: right;
+        display: inline-block;
+    }
+
+}
+
+/* Responsive menu*/
+
+@media screen and (max-width: 680px) {
+    ul.menu.responsive {
+        position: relative;
+    }
+    ul.menu.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    ul.menu.responsive li {
+        float: none;
+        display: inline;
+    }
+    ul.menu.responsive li a {
+        display: block;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+
+    img.banner, .row {
+        width: 70%;
+    }
+}

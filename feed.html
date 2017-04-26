@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSC309 A1 (Bipp's Profile)</title>
+        <link rel="stylesheet" href="feed.css">
+        <script src="profile.js"></script>
+    </head>
+    <body>
+        <header>
+            <span class="img"><a href="profile.html">&#10047; Bipp</a></span>
+
+            <ul class="menu" id="topMenu">
+            	<li><a href="profile.html">Home</a></li>
+                <li><a href="info.html">About Bipp</a></li>
+                <li><a href="feed.html">Bipp's Feed</a></li>
+                <li class="icon">
+                    <a onclick="dropMenu()">&#9776;</a>
+                </li>
+            </ul>
+        </header>
+
+        <!--Part 3: all data is non-persistent
+        Interaction 1: Posting
+        Interaction 2: Liking
+        -->
+
+    	<!--make new posts-->
+        <section class="row">
+            <h2>Post an update!</h2>
+            <textarea class="col-4 col-m12 test--input_text" id="myText" rows="2" cols="30"
+            			placeholder="Post a message"></textarea> 
+            <button class="col-2 col-m12 test--input_button SubmitButton" onclick="postAsText()">Post message</button>
+
+            <textarea class="col-4 col-m12 test--photo_url" id="myImg" rows="2" cols="30"
+                        placeholder="Post a url to an image"></textarea> 
+            <button class="col-2 col-m12 test--photo_button SubmitButton" onclick="postAsImg()">Post image</button>
+        </section>
+
+        <!--show all posts-->
+        
+        <article class="test--post" id="allPosts">
+        	<h1>Profile Feed</h1>
+        </article>
+
+    </body>
+</html>
+
+
+
+

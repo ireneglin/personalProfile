@@ -1,0 +1,109 @@
+/*css for nav navMenu*/
+* {
+    box-sizing: border-box;
+}
+
+header span.img {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+ul.navMenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3F324D;
+    opacity: 0.9;
+}
+
+ul.navMenu li {
+    float: left;
+}
+
+ul.navMenu li a {
+    padding: 16px;
+}
+
+ul.navMenu li a:hover {
+    background-color: #300030;
+}
+
+ul.navMenu li.icon {
+    display: none;
+}
+
+/*----------------------------------------------------------*/
+/*css relevant to landing page profile.html
+Background image source: http://gallery.wacom.com/gallery/16183123/Game-Background
+Profile picture sourse: */
+
+body {
+    background: url("bkgrd1.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+img#propic {
+    border-radius: 200px;
+    width: 280px;
+    height: 450px; 
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    opacity: 0.85;
+    box-shadow: 7px 7px 10px #3F324D;
+}
+
+/*welcome msg*/
+h1 {
+    text-align: center;
+    font-size: 70px;
+    color: white;
+    opacity: 0.85;
+    text-shadow: 3px 5px 7px #000000;
+}
+
+/*----------------------------------------------------------*/
+/*css for responsive design*/
+
+@media screen and (max-width: 680px) {
+    ul.navMenu li:not(:last-child){
+        display: none;
+    }
+    ul.navMenu li.icon {
+        float: right;
+        display: inline-block;
+    }
+
+}
+
+@media screen and (max-width: 680px) {
+    ul.navMenu.responsive {
+        position: relative;
+    }
+    ul.navMenu.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    ul.navMenu.responsive li {
+        float: none;
+        display: inline;
+    }
+    ul.navMenu.responsive li a {
+        display: block;
+        text-align: left;
+    }
+}
+
+
